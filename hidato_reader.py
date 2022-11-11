@@ -131,11 +131,7 @@ def read_and_solve_hidato(img,  model, on_original_image=True, heightImg=500, wi
         if val == 'q':
             return
     
-    t0 = time.perf_counter()
     solution_lattice = solve_with_cache(final_lattice)
-    t1 = time.perf_counter()
-    # if solution_lattice is not None:
-    #     print(f"In {t1-t0} seconds")
 
     if solution_lattice is None:
         raise Exception("Could not solve the hidato")
