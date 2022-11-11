@@ -19,7 +19,7 @@ st.write("""
         """
          )
 
-file = st.file_uploader("Please upload an image of a Hidato", type=['jpg','png'])
+file = st.file_uploader("Please upload an image of a Hidato", type=['jpg', 'png', 'jpeg'])
 if file is not None:
     img = Image.open(file)
     img = img.convert('RGB')
